@@ -1,21 +1,7 @@
 import React from 'react';
-import { makeStyles } from '@mui/styles';
 import { AppBar, Toolbar, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
-
-const useStyles = makeStyles((theme) => ({
-  link: {
-    textDecoration: 'none',
-    margin: 'auto',
-  },
-
-  title: {
-    cursor: 'pointer',
-    color: '#fff',
-    textAlign: 'center',
-    fontSize: '50px !important',
-  },
-}));
+import useStyles from '../../styles/headerStyles';
 
 const Header = () => {
   const classes = useStyles();

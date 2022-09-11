@@ -9,11 +9,16 @@ import {
 } from '@mui/material';
 import News from '../News';
 
+import AppPagination from '../AppPagiantion';
+import useStyles from '../../styles/tableStyles';
+
 const NewsList = () => {
+  const classes = useStyles();
+
   return (
     <>
       <TableContainer>
-        <Table style={{ margin: 'auto', width: '80%', marginTop: '20px' }}>
+        <Table className={classes.tableContainer}>
           <TableHead>
             <TableRow>
               <TableCell align="left">Article Name</TableCell>
@@ -30,6 +35,7 @@ const NewsList = () => {
           </TableBody>
         </Table>
       </TableContainer>
+      <AppPagination />
     </>
   );
 };

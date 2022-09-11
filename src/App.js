@@ -4,28 +4,30 @@ import { Provider } from 'react-redux';
 import store from './store';
 import Header from './components/Header';
 import NewsList from './components/NewsList';
-import AddModal from './components/ModalButton/AddModal';
+import AddModal from './components/ModalButton/';
 import Filter from './components/Filter';
 import { Box } from '@mui/system';
 
-const cache = new InMemoryCache({
-  typePolicies: {
-    Query: {
-      fields: {
-        articles: {
-          merge(existing, incoming) {
-            return incoming;
+const cache = new InMemoryCache(
+  {
+    typePolicies: {
+      Query: {
+        fields: {
+          articles: {
+            merge(existing, incoming) {
+              return incoming;
+            },
           },
-        },
-        categories: {
-          merge(existing, incoming) {
-            return incoming;
+          categories: {
+            merge(existing, incoming) {
+              return incoming;
+            },
           },
         },
       },
     },
-  },
-});
+  } || {}
+);
 
 const client = new ApolloClient({
   uri: 'http://localhost:5000/graphql',
@@ -54,7 +56,7 @@ function App() {
               <AddModal />
             </Box>
             <Routes>
-              <Route path="/" element={<NewsList />}></Route>
+              <Route path={'/'} element={<NewsList />}></Route>
             </Routes>
           </Router>
         </ApolloProvider>

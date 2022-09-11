@@ -9,9 +9,10 @@ import { articlesActions } from '../../store/articles-slice';
 const News = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
+  const page = useSelector((state) => state.pagination.page) || 1;
 
   const { loading, error, data } = useQuery(GET_ARTICLES, {
-    variables: { limit: '10', offset: '0' },
+    variables: { limit: '10', offset: String((page - 1) * 10) },
   });
 
   const { articles } = useSelector((state) => state.articles);
