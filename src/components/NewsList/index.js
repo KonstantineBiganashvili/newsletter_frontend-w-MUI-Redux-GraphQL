@@ -21,13 +21,26 @@ const NewsList = () => {
         <Table className={classes.tableContainer}>
           <TableHead>
             <TableRow>
-              <TableCell align="left">Article Name</TableCell>
-              <TableCell align="left">Author Name</TableCell>
-              <TableCell align="left">Author Email</TableCell>
-              <TableCell align="left">Author Phone</TableCell>
-              <TableCell align="left">Publication Category</TableCell>
-              <TableCell align="left">Publication Date</TableCell>
-              <TableCell align="left"></TableCell>
+              <TableCell sx={{ fontWeight: 'bold' }} align="left">
+                Article Name
+              </TableCell>
+              <TableCell sx={{ fontWeight: 'bold' }} align="left">
+                Author Name
+              </TableCell>
+              <TableCell sx={{ fontWeight: 'bold' }} align="left">
+                Author Email
+              </TableCell>
+              <TableCell sx={{ fontWeight: 'bold' }} align="left">
+                Author Phone
+              </TableCell>
+              <TableCell sx={{ fontWeight: 'bold' }} align="left">
+                Publication Category
+              </TableCell>
+              <TableCell sx={{ fontWeight: 'bold' }} align="left">
+                Publication Date
+              </TableCell>
+              <TableCell sx={{ fontWeight: 'bold' }} align="left"></TableCell>
+              <TableCell sx={{ fontWeight: 'bold' }} align="left"></TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

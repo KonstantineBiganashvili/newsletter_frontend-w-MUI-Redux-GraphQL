@@ -14,6 +14,24 @@ const modalsSlice = createSlice({
       date: '',
       content: '',
     },
+    editInputs: {
+      title: '',
+      categoryId: '',
+      name: '',
+      surname: '',
+      email: '',
+      phone: '',
+      date: '',
+      content: '',
+    },
+    readMoreModal: {
+      id: '',
+      open: '',
+    },
+    deleteModal: {
+      id: '',
+      open: '',
+    },
   },
 
   reducers: {
@@ -24,8 +42,27 @@ const modalsSlice = createSlice({
       };
     },
 
+    setEditInputs(state, action) {
+      state.editInputs = {
+        ...state.editInputs,
+        [action.payload.name]: action.payload.value,
+      };
+    },
+
+    setInitialEditValues(state, action) {
+      state.editInputs = action.payload;
+    },
+
     clearInput(state, action) {
       state.inputs = action.payload;
+    },
+
+    setOpenMoreModal(state, action) {
+      state.readMoreModal = action.payload;
+    },
+
+    setDeleteModal(state, action) {
+      state.deleteModal = action.payload;
     },
   },
 });

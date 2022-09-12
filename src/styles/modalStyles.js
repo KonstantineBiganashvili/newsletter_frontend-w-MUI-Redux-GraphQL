@@ -4,12 +4,12 @@ const useStyles = makeStyles({
   modalBoxContainer: {
     display: 'flex',
     flexDirection: 'column',
-    gap: 25,
+    gap: 20,
     transform: 'translate(-50%, -50%)',
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
-    position: 'absolute',
+    position: 'fixed',
     left: '50%',
     top: '50%',
     width: 900,
@@ -19,6 +19,16 @@ const useStyles = makeStyles({
 
   inputFields: {
     width: '80%',
+  },
+
+  inputFieldsContainer: {
+    width: '80%',
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
+
+  containedInputFields: {
+    width: '45%',
   },
 
   numberInputs: {
@@ -32,6 +42,14 @@ const useStyles = makeStyles({
     marginRight: '80px',
     display: 'flex',
     gap: '30px',
+  },
+
+  readMore: {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'start',
+    gap: '50px',
+    width: '100%',
   },
 });
 

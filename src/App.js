@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import Header from './components/Header';
 import NewsList from './components/NewsList';
-import AddModal from './components/ModalButton/';
+import AddModal from './components/AddModal/';
 import Filter from './components/Filter';
 import { Box } from '@mui/system';
 
